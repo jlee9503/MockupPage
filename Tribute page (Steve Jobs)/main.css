@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.78);
+    text-align: center;
+    padding: .5em 0 .5em 0;
+    box-shadow: 5px 5px 6px 6px rgba(48, 102, 219, 0.418);
+    width: 100%;
+}
+
+#title {
+    color: rgba(255, 255, 255, 0.8);
+    padding-bottom: .3em;
+    font-size: 2.5em;
+}
+
+#subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+}
+
+#img-div {
+    background-color: rgba(9, 22, 199, 0.08);
+    text-align: center;
+    padding: 3em 0 2em 0;
+    margin: 1.5em;
+}
+
+#image {
+    width: 100%;
+    display: block;
+    max-width: 600px;
+    max-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img-caption {
+    padding: .7em 0 0 0; 
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://media.idownloadblog.com/wp-content/uploads/2018/07/Apple-logo-black-and-white-429x500.png);
+    background-repeat: no-repeat;
+    background-size: 300px 350px;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+#tribute-info {
+    margin: 0 15em 0 15em;
+}
+
+#timeline {
+    text-align: center;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+.timeline_list {
+    line-height: 2.7em;
+}
+
+.timeline_bold {
+    font-weight: bold;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+}
+
+.footer {
+    font-size: 1.5em;
+    text-align: center;
+    margin: .7em 0 .7em 0;
+}
+
+@media (max-width: 1200px) {
+    #tribute-info {
+        margin: 0 10em 0 10em;
+    }
+
+    .container::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://media.idownloadblog.com/wp-content/uploads/2018/07/Apple-logo-black-and-white-429x500.png);
+        background-repeat: no-repeat;
+        background-size: 250px 300px;
+        background-position: center;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    #image {
+        width: 100%;
+        display: block;
+        max-width: 550px;
+        max-height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 790px) {
+    #tribute-info {
+        margin: 0 5em 0 5em;
+    }
+
+    .container::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://media.idownloadblog.com/wp-content/uploads/2018/07/Apple-logo-black-and-white-429x500.png);
+        background-repeat: no-repeat;
+        background-size: 200px 250px;
+        background-position: center;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    #image {
+        width: 100%;
+        display: block;
+        max-width: 400px;
+        max-height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

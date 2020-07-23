@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* custom properties */
+/* line height */
+:root {
+    --leading: 2em;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.bg {
+    background-image: url("images/orange2.jpg");
+    background-position: 12% 85%;  /* edit image size */
+    text-align: center;
+    color: white;
+    padding-bottom: 4em;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 2.5em 0 1.5em;
+    font-size: 2rem;
+}
+
+h1 span {
+    display: block;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;  /* stack of elements */
+}
+
+/* blue custom underline */
+h1 span::before {
+    content: ' ';
+    position: absolute;
+    width: 3em;
+    background: #00bfff;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;   /* stack of elements */
+}
+
+.formInput {
+    background-color: white;
+    color: black;
+}
+
+.title p {
+    font-weight: bold;
+    font-size: .8rem;
+    line-height: var(--leading);
+}
+
+.cityName {
+    display: block;
+    padding: 1.5em 0;
+    color: #2D7D98;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+input[type=text] {
+    width: 90%;
+    border-radius: 7px;
+    border: 1px solid #707070;
+    padding: 1em;
+    margin-bottom: -5px;
+}
+
+.formInput p {
+    font-size: .7em;
+}
+
+input[type=button] {
+    width: 95%;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    background-color: #F89104;
+    margin-top: 1.7em;
+    margin-bottom: 2em;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: rgb(223, 132, 4);
+}
+
+.lower {
+    text-align: center;
+    margin: 2em 1em;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::before {
+    content: ' ';
+    position: absolute;
+    width: 8em;
+    background: #00bfff;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;   /* stack of elements */
+}
+
+.lower p {
+    line-height: var(--leading);
+}
+
+/* change properties based on brower size */
+@media (min-width: 650px) {
+    section {
+        margin: 0 4em;  /* margin: top right */
+    }
+
+    .formInput {
+        margin-right: -4em;
+        margin-left: -4em;
+    }
+}
+
+@media (min-width: 900px) {
+    .bg {
+        text-align: left;
+    }
+
+    .formContainer {
+        margin-left: 2em;
+        display: flex;
+        padding-bottom: 1.7em;
+    }
+
+    .upper {
+        width: 60%;
+    }
+
+    .formInput {
+        border-radius: .5em;
+        margin: 3em 0 0 0;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+    }
+
+    .formLeft {
+        width: 90%;
+    }
+
+    input[type=text] {
+        padding-bottom: .8em;
+        margin-top: -.8em;
+    }
+
+    input[type=button] {
+        height: fit-content;
+        width: 30%;
+        margin-top: 5.2em;
+        margin-right: 4em;
+    }
+
+    /* grid editing */
+    section.lower {
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas: "bowl content"; 
+    }
+
+    .textColumn {
+        grid-area: content;
+        text-align: left;
+        padding-left: 3em;
+    }
+
+    img {
+        grid-area: bowl;
+    }
+}
+
+/* javascript - searching message */
+.searching {
+    width: 100%;
+    position: absolute;
+    color: white;
+    height: 100vh;
+    background: rgba(0, 0, 0, .8);
+    z-index: 1;
+    display: none;
+    place-content: center;
+    padding-bottom: 25em;
+}
+
+.searching {
+    animation: overlay 2s forwards;
+}
+
+
+/* animation */
+.upper {
+    /* animation: name, duration, direction */
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes overlay {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}

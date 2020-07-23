@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="formstyle.css">
+    <!-- javascript validation (email & number)-->
+</head>
+
+<body>
+    <main id="main-bg">
+        <div id="header">
+            <header>
+                <h1 id="title">Welcome!!</h1>
+                <p id="description">Please fill out this form</p>
+            </header>
+        </div>
+
+        <div class="form-content">
+            <h2 class="form-title">!~!~!~Ice cream party!~!~!</h2>
+            <p class="location">1234 Melon CT<br/>Ellicott City, MD 21043</p>
+
+            <form id="survey-form" action="#">
+                <fieldset class="content-border">
+                    <!-- NAME -->
+                    <p><label id="name-label">Name: </label></p>
+                    <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                    
+                    <!--EMAIL validation required-->
+                    <p><label id="email-label">Email: </label></p> 
+                    <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    
+                    <!-- PHONE -->
+                    <p><label id="phone">Phone: </label> </p>
+                    <input type="text" name="phone" placeholder="ex) 123-456-7890" required>
+                    
+                    <!-- Age group -->
+                    <p><label id="age-group">Age Group: </label> </p>
+                    <label class="container">
+                        <input type="radio" value="adult" name="age" id="adult"> Adult
+                    </label>
+                    <label class="container">
+                        <input type="radio" value="child" name="age" id="child"> Child
+                    </label>
+                    <label class="container">
+                        <input type="radio" value="senior" name="age" id="senior"> Senior
+                    </label> 
+
+                    <!-- BIRTHDAY -->
+                    <p><label id="birthday">Date of Birth: </label> </p>
+                    <input type="date" name="DOB" id="DOB" required> 
+                    
+                    <!-- PARTY SIZE NUMBER validation required-->
+                    <p><label id="number-label">Party Size: </label> </p>
+                    <input type="number" name="party-size" id="number" min="1" max="10" placeholder="Party size (Max: 10)" required>
+
+                    <!-- ICE CREAM SELECTION -->
+                    <p><label for="selection">Choose your favorite ice cream: </label> </p>
+                    <label class="container"><input type="checkbox" name="selection1" value="vanilla"> French vanilla</label>
+                    <label class="container"><input type="checkbox" name="selection2" value="choco-chip"> Chocolate Chip</label>
+                    <label class="container"><input type="checkbox" name="selection3" value="mint-choco"> Mint Choco</label>
+                    <label class="container"><input type="checkbox" name="selection4" value="cookies-cream"> Cookies & cream</label>
+                    <label class="container"><input type="checkbox" name="selection5" value="coffee"> Coffee</label>
+                    <label class="container"><input type="checkbox" name="selection6" value="pineapple"> Pineapple</label>
+                    <label class="container"><input type="checkbox" name="selection7" value="strawberry"> Strawberry</label> 
+
+                    <!-- Dropdown choices -->
+                    <p><label for="option">Choose your options: </label> </p>
+                    <select id="dropdown" name="options">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="1">Small Cup</option>
+                        <option value="2">Large Cup</option>
+                        <option value="3">Sugar Cone</option>
+                        <option value="4">Waffle Cone</option>
+                    </select>
+
+                    <!-- COMMENTS -->
+                    <p><label id="comments">Comments & Suggestion: </label> </p>
+                    <textarea class="textbox-size" name="comments" rows="7" cols="53"></textarea> 
+
+                    <!-- Submit button -->
+                    <input type="submit" value="Submit" id="submit">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+
+</body>
+</html>

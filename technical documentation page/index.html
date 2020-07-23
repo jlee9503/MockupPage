@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Documentation Page</title>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script type="text/javascript" src="nav_menu.js"></script>
+</head>
+
+<body>
+    <div id="grid-container">
+        <nav id="navbar">
+            <div id="menu" onclick="onClickMenu()">
+                <div class="menu-icon"></div>
+            </div>
+            
+            <div id="nav-logo">
+                <img id="ruby-icon" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ruby_logo.png" alt="ruby-icon" />
+                <header>Ruby</header>
+            </div>
+            
+            <div class="menu-list" id="menu-list">
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="#about">About Ruby</a></li>
+                    <li><a class="nav-link" href="#variables">Variables</a></li>
+                    <li><a class="nav-link" href="#decision_making">Decision Making</a></li>
+                    <li><a class="nav-link" href="#loops">Loops</a></li>
+                    <li><a class="nav-link" href="#ruby_method">Ruby Method</a></li>
+                    <li><a class="nav-link" href="#oop_concepts">OOP Concepts</a></li>
+                    <li><a class="nav-link" href="#arrays">Arrays</a></li>
+                    <li><a class="nav-link" href="#hashes">Hashes</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main-doc">
+            <!-- About Ruby -->
+            <section class="main-section" id="about">
+                <header>About Ruby</header>
+                <article>
+                    <p class="explanation">
+                        Ruby is a language of careful balance. Since its public release in 1995, Ruby has drawn devoted coders worldwide. In 2006, Ruby achieved mass acceptance. 
+                        With active user groups formed in the world’s major cities and Ruby-related conferences filled to capacity.
+                    </p>
+
+                    <p class="explanation">
+                        Ruby is ranked among the top 10 on most of the indices that measure the growth and popularity of programming languages worldwide (such as the TIOBE index). 
+                        Much of the growth is attributed to the popularity of software written in Ruby, particularly the Ruby on Rails web framework.
+                        Ruby is also completely free. Not only free of charge, but also free to use, copy, modify, and distribute.
+                        Ruby is seen as a flexible language, since it allows its users to freely alter its parts. Essential parts of Ruby can be removed or redefined, at will. 
+                        Existing parts can be added upon. Ruby tries not to restrict the coder.
+                    </p>
+                </article>
+            </section>
+
+            <!-- variables -->
+            <section class="main-section" id="variables">
+                <header>Variables</header>
+                <article>
+                    <p class="explanation">
+                        A variable in simple terms is a storage place which has some memory allocated to it. Basically, a variable used to store some form of data. Variables are simply a storage location. 
+                        Every variable is known by its name and stores some known and unknown piece of information known as value. There are different types of variables in Ruby:
+                    </p>
+
+                    <ul>
+                        <li>Local variables</li>
+                        <li>Instance variables</li>
+                        <li>Class variables</li>
+                        <li>Global variables</li>
+                    </ul>
+
+                    <p class="sub-heading">Example: </p>
+
+                    <code>
+                        # Local Variable
+                        age = 10
+                        Age = 20
+
+                        # Global variable 
+                        $age = 10
+
+                        # Instance Variables      
+                        @age = 20 
+
+                        # Class Variables 
+                        @@age = 20
+                    </code>
+                </article>
+            </section>
+
+            <!-- Decision Making -->
+            <section class="main-section" id="decision_making">
+                <header>Decision Making</header>
+                <article>
+                    <p class="explanation">
+                        Decision Making in programming is similar to decision making in real life. In programming too, a certain block of code needs to be executed when some condition is fulfilled. 
+                        In Ruby, the if-else statement is used to test the specified condition. There are various ‘if’ statements in Ruby:
+                    </p>
+
+                    <ul>
+                        <li>if statement</li>
+                        <li>if-else statement</li>
+                        <li>if-else-if ladder statement</li>
+                        <li>Ternary statement</li>
+                    </ul>
+
+                    <p class="sub-heading">Example: </p>
+                    <code>
+                        a = 10;  
+                        b = 15; 
+                        
+                        # if condition to check  
+                        # for even number  
+                        if a % 2 == 0  
+                            puts "Even Number" 
+                        end
+                        
+                        # if-else condition to check  
+                        # for even number or odd number 
+                        if b % 2 == 0  
+                            puts "Even Number" 
+                        else
+                            puts "Odd Number" 
+                        end 
+                    </code>
+
+                    <p class="sub-heading">Output: </p>
+                    <code>
+                        Even Number
+                        Odd Number
+                    </code>
+                </article>
+            </section>
+
+            <!-- Loops -->
+            <section class="main-section" id="loops">
+                <header>Loops</header>
+                <article>
+                    <P class="explanation">
+                        Looping in programming languages is a feature which clears the way for the execution of a set of instructions or functions repeatedly when some of the condition evaluates to true or false. 
+                        Ruby provides the different types of loop to handle the condition based situation in the program to make the programmers task simpler. The loops in Ruby are :
+                    </P>
+
+                    <P class="sub-heading">Example: For Loop</P>
+                    <code>
+                        # Ruby program to illustrate 'for'   
+                        # loop using range as expression  
+                            
+                        i = "Sudo Placements"
+                            
+                        # using for loop with the range  
+                        for a in 1..5 do
+                                
+                        puts i  
+                            
+                        end
+                    </code>
+
+                    <p class="sub-heading">Output: </p>
+                    <code>
+                        Sudo Placements
+                        Sudo Placements
+                        Sudo Placements
+                        Sudo Placements
+                        Sudo Placements
+                    </code>
+
+                    <P class="sub-heading">Example: While Loop</P>
+                    <code>
+                        # Ruby program to illustrate 'while' loop  
+                        # variable x  
+                        x = 4
+                            
+                        # using while loop   
+                        # here condtional is x i.e. 4  
+                        while x >= 1 
+                            
+                        # statements to be executed  
+                        puts "GeeksforGeeks"
+                        x = x - 1
+                            
+                        # while loop ends here  
+                        end
+                    </code>
+
+                    <p class="sub-heading">Output: </p>
+                    <code>
+                        GeeksforGeeks
+                        GeeksforGeeks
+                        GeeksforGeeks
+                        GeeksforGeeks
+                    </code>
+                </article>
+            </section>
+
+            <!-- Ruby Method -->
+            <section class="main-section" id="ruby_method">
+                <header>Ruby Method</header>
+                <article>
+
+                    <p class="explanation">
+                        Method is a collection of statements that perform some specific task and return the result. Methods allow the user to reuse the code without retyping the code. 
+                        Methods are time savers and help the user to reuse the code without retyping the code. 
+                        In Ruby, the method defines with the help of def keyword followed by method_name and end with end keyword. 
+                    </p>
+
+                    <p class="sub-heading">Example: </p>
+
+                    <code>
+                        # Here geeks is the method name  
+                        def geeks  
+                            
+                        # statements to be displayed  
+                        puts "Welcome to GFG portal"
+                            
+                        # keyword to end method  
+                        end
+                            
+                        # calling of the method  
+                        geeks  
+                    </code>
+                    
+                    <p class="sub-heading">Output: </p>
+                    <code>
+                        Welcome to GFG portal
+                    </code>
+                </article>
+            </section>
+
+            <!-- OOP Concepts -->
+            <section class="main-section" id="oop_concepts">
+                <header>OOP Concepts</header>
+                <article>
+
+                    <p class="explanation">
+                        When we say object-oriented programming, we mean that our code is centered on objects. Objects are real-life instances that are classified into various types. 
+                        Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. 
+                        Ruby supports the OOP paradigm by allowing the creation of classes and its objects.
+                    </p>
+
+                    <p class="sub-heading">OOP Concepts: </p>
+                    <ul>
+                        <li>Polymorphism</li>
+                        <li>Inheritance</li>
+                        <li>Encapsulation</li>
+                        <li>Class & Object</li>
+                        <li>Constructors</li>
+                    </ul>
+
+                    <p class="sub-heading">Example: </p>
+
+                    <code>
+                        # Super class or parent class  
+                        class GeeksforGeeks   
+                            
+                            # constructor of super class  
+                            def initialize   
+                                    
+                                puts "This is Superclass"
+                            end
+                                
+                            # method of the superclass  
+                            def super_method  
+                                    
+                                puts "Method of superclass"
+                            end
+                        end
+                            
+                        # subclass or derived class   
+                        class Sudo_Placement < GeeksforGeeks   
+                            
+                            # constructor of deriver class  
+                            def initialize   
+                            
+                            puts "This is Subclass"
+                            end
+                        end
+                            
+                        # creating object of superclass  
+                        GeeksforGeeks.new
+                            
+                        # creating object of subclass  
+                        sub_obj = Sudo_Placement.new
+                            
+                        # calling the method of super   
+                        # class using sub class object  
+                        sub_obj.super_method  
+                    </code>
+
+                    <p class="sub-heading">Output: </p>
+                    <code>
+                        This is Superclass
+                        This is Subclass
+                        Method of superclass
+                    </code>
+                </article>
+            </section>
+
+            <!-- Arrays -->
+            <section class="main-section" id="arrays">
+                <header>Arrays</header>
+                <article>
+                    <p class="explanation">
+                        An array is a collection of different or similar items, stored at contiguous memory locations. 
+                        The idea is to store multiple items of the same type together which can be referred to by a common name. 
+                        In general, an array is created by listing the elements which will be separated by commas and enclosed between the square brackets[].
+                    </p>
+
+                    <p class="sub-heading">Syntax: </p>
+                    <code>
+                        name_of_array= Array.new["Geeks", 55, 61, "GFG"]
+                    </code>
+
+                    <p class="sub-heading">Example: </p>
+                    <code>
+                        # creating string using []  
+                        str = ["GFG", "G4G", "Sudo", "Geeks"]  
+                            
+                        # accessing array elements  
+                        # using index  
+                        puts str[1]  
+                            
+                        # using the negative index  
+                        puts str[-1]  
+                    </code>
+
+                    <p class="sub-heading">Output: </p>
+                        <code>
+                            G4G
+                            Geeks
+                        </code>
+                </article>
+            </section>
+
+            <!-- Hashes -->
+            <section class="main-section" id="hashes">
+                <header>Hashes</header>
+                <article>
+                    <p class="explanation">
+                        Hash is a data structure that maintains a set of objects which are termed as the keys and each key associates a value with it. In simple words, a hash is a collection of unique keys and their values.
+                        A hash is created using the hash literal which is a comma-separated list of key/value pairs and it always enclosed within curly braces {}. There are different ways to create a hash :
+                    </p>
+
+                    <p class="sub-heading">Syntax: </p>
+                    <code>
+                        hash_variable = Hash.new
+                    </code>
+
+                    <p class="sub-heading">Example: </p>
+                    <code>
+                        # Creating a hash using new class method  
+                        # without the default value  
+                        geeks = Hash.new
+                            
+                        # empty hash will return nothing on display  
+                        puts "#{geeks[4]}"
+                            
+                        # creating hash using new class method  
+                        # providing default value  
+                        # this could be written as   
+                        # geeks = Hash.new "GFG"  
+                        geeks_default = Hash.new("GFG")  
+                            
+                        # it will return GFG for every index of hash  
+                        puts "#{geeks_default[0]}"
+                        puts "#{geeks_default[7]}"
+                            
+                        # creating hash using {} braces  
+                        geeks_hash1 = {"DS" => 1, "Java" => 2}  
+                            
+                            
+                        # fetching values of hash using []  
+                        puts geeks_hash1['DS']     
+                        puts geeks_hash1['Java']    
+                    </code>
+
+                    <p class="sub-heading">Output: </p>
+                        <code>
+                            GFG
+                            GFG
+                            1
+                            2
+                        </code>
+                </article>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
